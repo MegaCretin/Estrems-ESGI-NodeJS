@@ -58,4 +58,42 @@ endPoint:
         Méthode: GET
         Description: Permet d'avoir la liste de tous les héros créés
 
-    
+Abandon du framework Meteor car beaucoup de chose à apprendre.
+
+Donc je suis passer sur Express mais je n'ai pas supprimé mon projet Meteor (projet\LordOfTheRings-Meteor)
+
+
+Express:
+
+endPoint: 
+    /gestion/peuples :
+        Méthode: GET
+        Description: Renvoie la liste des peuples
+    /gestion/peuple/:id :
+        Méthode: GET
+        Description: Renvoie un peuple grace à l'id
+    /gestion/postPeuple :
+        Méthode: POST
+        Description: Crée un nouveau peuple
+        Body {
+            "id": 1,
+            "libelle": "Gondor",
+            "race": "Humain",
+            "nbHabitant": 200000,
+            "fondateur": "Isildur et Anárion",
+            "description": "Puissant royaume humain ayant eu pour capitales successives Osgiliath puis Minas Anor, renommée Minas Tirith"
+        }
+    /gestion/delPeuple/:id :
+        Méthode: POST
+        Description: Supprime un peuple grace à l'id
+    /gestion/upPeuple/:id :
+        Méthode: PUT
+        Description: Update du peuple sélectionné grace à l'id
+        Body {
+            "id": 1,
+            "libelle": "Gondor",
+            "race": "Humain",
+            "nbHabitant": 200000,
+            "fondateur": "Isildur et Anárion",
+            "description": "Puissant royaume humain ayant eu pour capitales successives Osgiliath puis Minas Anor, renommée Minas Tirith"
+        }
