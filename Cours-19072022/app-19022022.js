@@ -32,7 +32,6 @@ const server = http.createServer((req, res) => {
             console.log(err);
         })
     }
-    }
 });
 
 server.listen(3000);
