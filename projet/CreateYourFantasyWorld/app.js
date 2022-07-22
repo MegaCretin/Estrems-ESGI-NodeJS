@@ -6,12 +6,23 @@ const port = 3000
 // Appel de la bibliothèque de MongoDB
 const mongoose = require('mongoose');
 
+// Creation d'une variable route
+const route = require('./routes/peupleRoute');
+
 // Gestion CORS Policy
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     next();
+});
+
+// 
+app.use("/gestion", route);
+
+
+app.listen(port, () => {
+    console.log(`L'app va écouter le port ${port}`)
 });
 
 // Configuration d'une base de donnée MongoDB

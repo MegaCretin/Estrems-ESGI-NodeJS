@@ -7,7 +7,12 @@ const peupleSchema = new Schema(
   {
     // Id du peuple
     id: {
-      type: int,
+      type: Number,
+      required: true
+    },
+    // Nom du peuple
+    libelle: {
+      type: String,
       required: true
     },
     // Race des habitants
@@ -17,13 +22,13 @@ const peupleSchema = new Schema(
     },
     // Nombre d'habitants
     nbHabitant: {
-      type: int,
-      required: false
+      type: Number,
+      required: true
     },
     // Createur du peuple
     fondateur: {
       type: String,
-      required: false
+      required: true
     },
     // Description du peuple
     description: {
