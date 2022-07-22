@@ -112,7 +112,7 @@ exports.upPeupleById = (req, res, next) => {
 
         // Mise a jour des données (données bruts)
         // Id du peuple
-        post.id = req.body.peupleId;
+        post.id = req.params.peupleId;
         // Libelle du peuple
         post.libelle = req.body.libelle;
         // Race du peuple
