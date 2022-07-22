@@ -46,7 +46,6 @@ exports.getPeupleById  = (req, res, next) => {
 
 // Ajout d'un peuple
 exports.postPeuple = (req, res, next) => {
-  console.log(req);
     //creation d'un nouveau peuple partir des parametre de requêtes
     const newPeuple = new model({
         // Id du nouveau peuple
